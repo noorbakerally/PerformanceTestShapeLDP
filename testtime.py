@@ -20,7 +20,8 @@ for nameInt in range(50,27050,50):
 	catalog = copy.deepcopy(obj)
 	catalog["name"] = name
 	i = 0
-	for i in range(5):
+	maxRun = 5
+	for i in range(maxRun):
 		command = "java -jar "+jarPath+" -d "+designDocument+" -o 0 -if datasets/" + name 
 		print command 
 		output = subprocess.check_output(command, shell=True)
